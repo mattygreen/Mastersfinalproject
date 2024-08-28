@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Modals Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.min.js"></script>
+
+
+</head>
+<body data-barba="wrapper">
+    <section class ="intro"> 
+        <h1>Anti-racism and Resistance</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, aliquid? Aliquam architecto maiores facere quos velit quia sed debitis nostrum recusandae vitae exercitationem itaque dignissimos quod eligendi aperiam impedit possimus perferendis eaque cupiditate id, repellat ex iste ipsum sit! Blanditiis beatae architecto, eveniet alias corporis quisquam placeat est ea, quis a minus numquam earum nobis, perspiciatis nisi ipsum sit aliquid adipisci eum esse saepe eius. Omnis unde cumque sit error ea sed veritatis numquam iste quidem ipsa animi laboriosam porro blanditiis exercitationem, accusantium illum excepturi. Tempore commodi libero placeat. Et nemo dolor quae eius officia. Minima eveniet, voluptatibus, enim sequi magnam quod deleniti ea tenetur possimus, fugit nobis at. Quod, inventore fugit veniam doloremque maiores qui laboriosam sed neque ratione repellat, eveniet nisi consequuntur nihil obcaecati at, quisquam culpa. Illum ullam corporis inventore veritatis tempora accusamus obcaecati necessitatibus quasi ne</p>
+    
+        <div class="arrow-down">&#x25BC;</div>
+        </section>
+        <div class="container">
+            <div class="triangle"></div>
+        </div>
+    <div id="listContainerWrapper">
+        <ul id="listContainer"></ul>
+    </div>
+
+    <div id="modalsContainer"></div>
+
+    <div class="reversebutton"> 
+        <p>back to home!</p>
+        <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.47 21.5">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #231f20;
+                  stroke: #231f20;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+            </defs>
+            <g id="Layer_1-2" data-name="Layer_1">
+              <g>
+                <rect class="cls-1" x=".5" y="17.12" width="20.47" height="3.88" rx="1.94" ry="1.94"/>
+                <rect class="cls-1" x="12.02" y="11.63" width="15.03" height="2.87" rx="1.44" ry="1.44" transform="translate(6.47 32.61) rotate(-90)"/>
+                <rect class="cls-1" x="7.69" y="5.55" width="12.64" height="2.87" rx="1.44" ry="1.44" transform="translate(28.01 13.98) rotate(-180)"/>
+                <rect class="cls-1" x="6.74" y="8.6" width="8" height="1.66" rx=".83" ry=".83" transform="translate(11.15 23.72) rotate(-132.97)"/>
+                <rect class="cls-1" x="6.17" y="3.24" width="8" height="1.66" rx=".83" ry=".83" transform="translate(18.79 -2.7) rotate(120)"/>
+              </g>
+            </g>
+          </svg>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core">
+
+  barba.init({
+    transitions: [{
+    name: 'opacity-transition',
+    leave(data) {
+      return gsap.to(data.current.container, {
+        opacity: 0
+      });
+    },
+    enter(data) {
+      return gsap.from(data.next.container, {
+        opacity: 0
+      });
+    }
+  }]
+  })
+    </script>
+
+</body>
+</html>
